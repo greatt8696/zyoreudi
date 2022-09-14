@@ -3,18 +3,124 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+  border-radius: 50%;
+  margin-bottom: 50px;
+}
+.calendar{
+  width: 1300px;
+  height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date {
+  text-align: left;
+  width: 130px;
+  height: 100px;
+  margin: 5px;
+  border-radius: 15px;
+  padding: 15px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.date > p {
+  margin: 0;
+}
+
+.sevenDay{
+  cursor:default;
+  font-weight: 900;
+  color: black;
+  font-size: 35px !important;
+}
+.selected{transform: scale(1.2);}
+
+.white{
+  color: white;
+  animation: white_glitter 5s infinite linear;
+  border: 3px solid greenyellow;
+}
+.red{
+  color: red;
+  animation: red_glitter 5s infinite linear;
+  border: 3px solid red;
+}
+.blue{
+  color: blue;
+  animation: blue_glitter 5s infinite linear;
+  border: 3px solid blue;
+}
+
+.white:hover{
+  color: white;
+  animation: white_glitter 5s infinite linear;
+}
+.red:hover{
+  color: red;
+  animation: red_glitter 5s infinite linear;
+}
+.blue:hover{
+  color: blue;
+  animation: blue_glitter 5s infinite linear;
+}
+
+.date:hover {
+  animation: glitter 3s infinite linear;
+}
+.sevenDay > p {
+  margin: 0;
+}
+
+
+
+@keyframes white_glitter {
+  0%,
+  100% {
+    background-color: none;
+    color: greenyellow;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 5px greenyellow;
+    background-color: greenyellow;
+    color: white;
+  }
+}
+@keyframes red_glitter {
+  0%,
+  100% {
+    background-color: none;
+    color: red;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 5px red;
+    background-color: red;
+    color: white;
+  }
+}
+@keyframes blue_glitter {
+  0%,
+  100% {
+    background-color: none;
+    color: blue;
+  }
+  50% {
+    
+    box-shadow: 0px 0px 30px 5px blue;
+    background-color: blue;
+    color: white;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0b0c0e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,6 +138,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
